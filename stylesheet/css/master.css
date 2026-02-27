@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+.key-pressed {
+    /* transform: translateY(1px); */
+    box-shadow:
+        inset 0 -8px 12px rgba(0,0,0,0.3),
+        0 2px 4px rgba(0,0,0,0.2);
+}
+
+.key {
+    transition: 0.08s ease;
+}
+.hide-keys li {
+    font-size: 0;
+}

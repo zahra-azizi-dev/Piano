@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet/css/out.css">
+</head>
+
+<body class="bg-[#E3F2FD] min-h-screen flex items-start justify-center py-10">
+    <div class="piano  w-[820px] h-[400px] bg-[#0f0f10] rounded-[22px] shadow-2xl p-8 mx-auto ">
+        <header class=" flex items-center justify-between gap-8 ">
+            <h2 class="text-white text-2xl font-semibold tracking-wide">Playable PIANO</h2>
+            <div class="volomeSLder  flex items-center gap-4">
+                <span class="text-white/80 text-xl">Volume</span><input type="range" class="accent-gray-200" min="0"
+                    max="1" value="0.5" step="any">
+            </div>
+            <!-- <div class="keyCheackbox flex items-center gap-4">
+                <span class="text-white/80 text-xl">show keys</span><input type="checkbox" class="accent-gray-200">
+            </div> -->
+        </header>
+        <ul
+            class="pianoKeys relative flex h-[260px] select-none mt-16 mx-8 *:transition-transform  *:transition-all *:duration-200 *:ease-in-out ">
+            <li class="key-white relative w-[70px] h-[240px] border-2 border-black/20 rounded-xl shadow-[inset_0_-10px_16px_rgba(0,0,0,0.18),0_10px_18px_rgba(0,0,0,0.25)] flex items-end justify-start p-3 bg-amber-50 text-gray-400 text-center uppercase "
+                data-key="a">a</li>
+            <li class="key-black  absolute w-[46px] h-[150px]  bg-gradient-to-b  from-gray-900 to-black rounded-b-lg shadow-xl z-10 flex items-end justify-center pb-3 left-[47px]  text-gray-400 text-center uppercase"
+                data-key="w">w</li>
+            <li class="key-white relative w-[70px] h-[240px] border-2 border-black/20 rounded-xl shadow-[inset_0_-10px_16px_rgba(0,0,0,0.18),0_10px_18px_rgba(0,0,0,0.25)] flex items-end justify-start p-3 bg-amber-50 text-gray-400 text-center uppercase"
+                data-key="s">s</li>
+            <li class="key-black absolute w-[46px] h-[150px] bg-gradient-to-b from-gray-900 to-black rounded-b-lg shadow-xl z-10 flex items-end justify-center pb-3 left-[117px]  text-gray-400 text-center uppercase"
+                data-key="e">e</li>
+            <li class="key-white relative w-[70px] h-[240px] border-2 border-black/20 rounded-xl shadow-[inset_0_-10px_16px_rgba(0,0,0,0.18),0_10px_18px_rgba(0,0,0,0.25)] flex items-end justify-start p-3 bg-amber-50 text-gray-400 text-center uppercase"
+                data-key="d">d</li>
+            <li class="key-white relative w-[70px] h-[240px] border-2 border-black/20 rounded-xl shadow-[inset_0_-10px_16px_rgba(0,0,0,0.18),0_10px_18px_rgba(0,0,0,0.25)] flex items-end justify-start p-3 bg-amber-50 text-gray-400 text-center uppercase"
+                data-key="f">f</li>
+            <li class="key-black absolute w-[46px] h-[150px] bg-gradient-to-b from-gray-900 to-black rounded-b-lg shadow-xl z-10 flex items-end justify-center pb-3 left-[257px]  text-gray-400 text-center uppercase"
+                data-key="t">t</li>
+            <li class="key-white relative w-[70px] h-[240px] border-2 border-black/20 rounded-xl shadow-[inset_0_-10px_16px_rgba(0,0,0,0.18),0_10px_18px_rgba(0,0,0,0.25)] flex items-end justify-start p-3 bg-amber-50 text-gray-400 text-center uppercase"
+                data-key="g">g</li>
+            <li class="key-black absolute w-[46px] h-[150px] bg-gradient-to-b from-gray-900 to-black rounded-b-lg shadow-xl z-10 flex items-end justify-center pb-3 left-[327px]  text-gray-400 text-center uppercase"
+                data-key="y">y</li>
+            <li class="key-white relative w-[70px] h-[240px] border-2 border-black/20 rounded-xl shadow-[inset_0_-10px_16px_rgba(0,0,0,0.18),0_10px_18px_rgba(0,0,0,0.25)] flex items-end justify-start p-3 bg-amber-50 text-gray-400 text-center uppercase"
+                data-key="h">h</li>
+            <li class="key-black absolute w-[46px] h-[150px] bg-gradient-to-b from-gray-900 to-black rounded-b-lg shadow-xl z-10 flex items-end justify-center pb-3 left-[397px]  text-gray-400 text-center uppercase"
+                data-key="u">u</li>
+            <li class="key-white relative w-[70px] h-[240px] border-2 border-black/20 rounded-xl shadow-[inset_0_-10px_16px_rgba(0,0,0,0.18),0_10px_18px_rgba(0,0,0,0.25)] flex items-end justify-start p-3 bg-amber-50 text-gray-400 text-center uppercase"
+                data-key="j">j</li>
+            <li class="key-white relative w-[70px] h-[240px] border-2 border-black/20 rounded-xl shadow-[inset_0_-10px_16px_rgba(0,0,0,0.18),0_10px_18px_rgba(0,0,0,0.25)] flex items-end justify-start p-3 bg-amber-50 text-gray-400 text-center uppercase"
+                data-key="k">k</li>
+            <li class="key-black absolute w-[46px] h-[150px] bg-gradient-to-b from-gray-900 to-black rounded-b-lg shadow-xl z-10 flex items-end justify-center pb-3 left-[537px]  text-gray-400 text-center uppercase"
+                data-key="o">o</li>
+            <li class="key-white relative w-[70px] h-[240px] border-2 border-black/20 rounded-xl shadow-[inset_0_-10px_16px_rgba(0,0,0,0.18),0_10px_18px_rgba(0,0,0,0.25)] flex items-end justify-start p-3 bg-amber-50 text-gray-400 text-center uppercase"
+                data-key="l">l</li>
+            <li class="key-black absolute w-[46px] h-[150px] bg-gradient-to-b from-gray-900 to-black rounded-b-lg shadow-xl z-10 flex items-end justify-center pb-3 left-[603px]  text-gray-400 text-center uppercase"
+                data-key="p">p</li>
+            <li class="key-white relative w-[70px] h-[240px] border-2 border-black/20 rounded-xl shadow-[inset_0_-10px_16px_rgba(0,0,0,0.18),0_10px_18px_rgba(0,0,0,0.25)] flex items-end justify-start p-3 bg-amber-50 text-gray-400 text-center uppercase"
+                data-key=";">;</li>
+        </ul>
+
+    </div>
+
+</body>
+<script>
+    const volomeSLder = document.querySelector('.volomeSLder input')
+    const keyCheackbox = document.querySelector('.keyCheackbox input')
+    const pianoKeys = document.querySelectorAll('.pianoKeys li')
+    let currentVolume = 0.5
+    let audio = null
+    pianoKeys.forEach((val) => {
+        val.addEventListener('click', () => {
+            playNote(val)
+
+
+
+
+        })
+
+    });
+    volomeSLder.addEventListener('input', (e) => {
+        currentVolume = Number(e.target.value)
+        console.log(currentVolume)
+        if (audio != null) {
+            audio.volume = currentVolume
+
+        }
+
+
+
+    })
+    document.addEventListener('keydown', (e) => {
+        let type = e.key.toLowerCase()
+        let alpha = document.querySelector(`[data-key='${type}']`)
+        console.log("down", e.key)
+
+        if (alpha != null) {
+            playNote(alpha)
+
+        }
+
+    })
+    function playNote(val) {
+        let temp = val.dataset.key
+        let path = "stylesheet/tunes/" + temp + ".wav"
+        audio = new Audio(path)
+        audio.volume = currentVolume
+
+        audio.play()
+        val.classList.add('key-pressed')
+        // console.log("temp:", temp)
+        // console.log("path:", path)
+
+        setTimeout(() => {
+            val.classList.remove('key-pressed')
+
+        }, 100)
+
+    }
+//     keyCheackbox.addEventListener('change', () => {
+//     pianoList.classList.toggle('hide-keys')
+
+// })
+</script>
+
+</html>
+<!-- npx @tailwindcss/cli -i ./src/stylesheet/css/master.css -o ./src/stylesheet/css/out.css --watch -->
